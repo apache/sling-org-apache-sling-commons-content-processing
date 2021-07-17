@@ -31,10 +31,10 @@ import org.osgi.annotation.versioning.ProviderType;
 public interface ContentProcessor {
 
     /**
-     * @param input      The stream from which the content is read for processing
-     * @param output     The stream into which the content is written during or after processing
-     * @param parameters The parameters for the processing operation
-     * @param report     The report to which the findings of the processing operation are added
+     * @param input      the stream from which the content is read for processing
+     * @param output     the stream into which the content is written during or after processing
+     * @param parameters the parameters for the processing operation
+     * @param report     the report to which the findings of the processing operation are added
      * @return {@link java.util.concurrent.CompletableFuture} for signaling completion
      */
     @NotNull CompletableFuture<Void> process(@NotNull final InputStream input, @NotNull final OutputStream output, @Nullable final Map<String, Object> parameters, @NotNull final Map<String, Object> report);

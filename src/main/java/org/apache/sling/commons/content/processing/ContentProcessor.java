@@ -27,6 +27,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.osgi.annotation.versioning.ProviderType;
 
+/**
+ * Service for processing content.
+ */
 @ProviderType
 public interface ContentProcessor {
 

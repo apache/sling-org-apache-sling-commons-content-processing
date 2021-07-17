@@ -42,6 +42,6 @@ public interface ContentProcessor {
      * @param report     the report to which the findings of the processing operation are added
      * @return {@link java.util.concurrent.CompletableFuture} for signaling completion
      */
-    @NotNull CompletableFuture<Void> process(@NotNull final InputStream input, @NotNull final OutputStream output, @Nullable final Map<String, Object> parameters, @NotNull final Map<String, Object> report);
+    public abstract @NotNull CompletableFuture<Void> process(@NotNull final InputStream input, @NotNull final OutputStream output, @Nullable final Map<String, Object> parameters, @NotNull final Map<String, Object> report);
 
 }

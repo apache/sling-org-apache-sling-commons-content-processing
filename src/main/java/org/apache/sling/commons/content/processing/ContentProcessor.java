@@ -34,6 +34,8 @@ import org.osgi.annotation.versioning.ProviderType;
 public interface ContentProcessor {
 
     /**
+     * Processes the given content.
+     *
      * @param input      the stream from which the content is read for processing
      * @param output     the stream into which the content is written during or after processing
      * @param parameters the parameters for the processing operation

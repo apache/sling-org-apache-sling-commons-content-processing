@@ -20,7 +20,7 @@
 /**
  * Provides the Apache Sling Commons Content Processing API.
  */
-@Version("1.0.0")
+@Version("2.0.0")
 package org.apache.sling.commons.content.processing;
 
 import org.osgi.annotation.versioning.Version;

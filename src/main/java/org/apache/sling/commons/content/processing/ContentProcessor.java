@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Supplier;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -36,12 +37,12 @@ public interface ContentProcessor {
     /**
      * Processes the given content.
      *
-     * @param input      the stream from which the content is read for processing
-     * @param output     the stream into which the content is written during or after processing
+     * @param input      the supplier of the stream from which the content is read for processing
+     * @param output     the supplier of the stream into which the content is written during or after processing
      * @param parameters the parameters for the processing operation
      * @param report     the report to which the findings of the processing operation are added
      * @return {@link java.util.concurrent.CompletableFuture} for signaling completion
      */
-    public abstract @NotNull CompletableFuture<Void> process(@NotNull final InputStream input, @NotNull final OutputStream output, @Nullable final Map<String, Object> parameters, @NotNull final Map<String, Object> report);
+    public abstract @NotNull CompletableFuture<Void> process(@NotNull final Supplier<InputStream> input, @NotNull final Supplier<OutputStream> output, @Nullable final Map<String, Object> parameters, @NotNull final Map<String, Object> report);
 
 }
